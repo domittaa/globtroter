@@ -1,107 +1,107 @@
-# Globtroter: flagi, mapy i stolice (iPad)
+# Globtroter: flags, maps and capitals (iPad)
 
-Cała aplikacja to folder **`app`**. Działa w Safari na iPadzie, a po dodaniu do ekranu
-początkowego otwiera się jak zwykła aplikacja: z własną ikoną, na pełnym ekranie i bez internetu.
+The whole app is the **`app`** folder. It runs in Safari on an iPad, and once added to the Home Screen
+it opens like a regular app: with its own icon, full screen and no internet connection needed.
 
-| Tryb | Na czym polega |
-|------|----------------|
-| 🏳️ **Flagi** | Pokazuje się flaga, wpisujesz nazwę kraju (albo wybierasz z 4 odpowiedzi). |
-| 🗺️ **Mapa** | Wybierasz kontynent. Na mapie są kontury państw, obok lista krajów. Przeciągasz nazwy na właściwe miejsca. |
-| 🏛️ **Stolice** | Pokazuje się kraj, wpisujesz jego stolicę (albo wybierasz z 4 odpowiedzi). |
-| 📖 **Atlas** | Ściąga do nauki: każdy kraj z flagą, stolicą i położeniem na mapie świata. |
+| Mode | What it does |
+|------|--------------|
+| 🏳️ **Flags** | A flag is shown and you type the country's name (or pick from 4 answers). |
+| 🗺️ **Map** | Pick a continent. The map shows country outlines with a list of countries next to it. You drag the names onto the right places. |
+| 🏛️ **Capitals** | A country is shown and you type its capital (or pick from 4 answers). |
+| 📖 **Atlas** | A study cheat sheet: every country with its flag, capital and location on the world map. |
 
-W środku jest 197 państw: 193 członków ONZ oraz Watykan, Palestyna, Kosowo i Tajwan.
-Rosja i Turcja są na mapach Europy i Azji.
-
----
-
-## Instalacja na iPadzie (na stałe, zalecana)
-
-Tak samo jak Kolorowanka: aplikację trzeba raz wrzucić do internetu, żeby iPad mógł ją pobrać.
-
-**Na Macu:**
-
-1. Otwórz w przeglądarce stronę **https://app.netlify.com/drop** i zaloguj się.
-2. W Finderze otwórz folder `claude_projects` → `globtroter`. Przeciągnij folder **`app`**
-   na pole do upuszczania plików na stronie Netlify.
-3. Po kilku sekundach dostaniesz adres w rodzaju `https://cos-tam-123abc.netlify.app`.
-   Możesz go zmienić na łatwiejszy: **Site configuration → Change site name**
-   (np. `globtroter-moj`, wtedy adres to `https://globtroter-moj.netlify.app`).
-
-**Na iPadzie:**
-
-4. Otwórz ten adres w **Safari**.
-5. Stuknij **Udostępnij** (kwadrat ze strzałką w górę), a potem **„Do ekranu początkowego”**.
-   Jeśli pojawi się przełącznik **„Otwórz jako aplikację internetową”**, zostaw go włączonego. Stuknij **Dodaj**.
-6. Uruchamiaj Globtrotera ikoną z ekranu początkowego. Za pierwszym razem iPad musi mieć internet,
-   żeby pobrać mapy i flagi (około 4 MB). Później działa też offline.
-
-**Aktualizacja:** gdy w aplikacji coś się zmieni, w Netlify wejdź w swoją stronę → **Deploys** i przeciągnij
-nowy folder `app` na pole „Need to update your site?”. iPad pobierze nową wersję przy następnym uruchomieniu z internetem.
-
-Punkty, odznaki i postępy zapisują się na iPadzie, w samej aplikacji. Nie usuwaj danych tej strony
-w Ustawieniach Safari, bo stracisz postępy.
+There are 197 countries: the 193 UN members plus the Vatican, Palestine, Kosovo and Taiwan.
+Russia and Turkey appear on both the Europe and Asia maps.
 
 ---
 
-## Szybki test bez zakładania konta (iPad i Mac w tej samej sieci Wi-Fi)
+## Installing on the iPad (permanent, recommended)
 
-1. Na Macu otwórz **Terminal** i wpisz:
+Same as with Kolorowanka: the app has to be uploaded to the internet once so the iPad can download it.
+
+**On the Mac:**
+
+1. Open **https://app.netlify.com/drop** in a browser and log in.
+2. In Finder open the `claude_projects` → `globtroter` folder. Drag the **`app`** folder
+   onto the drop area on the Netlify page.
+3. After a few seconds you will get an address like `https://something-123abc.netlify.app`.
+   You can change it to an easier one: **Site configuration → Change site name**
+   (e.g. `globtroter-mine`, which makes the address `https://globtroter-mine.netlify.app`).
+
+**On the iPad:**
+
+4. Open that address in **Safari**.
+5. Tap **Share** (the square with an up arrow), then **"Add to Home Screen"**.
+   If an **"Open as Web App"** switch appears, leave it on. Tap **Add**.
+6. Launch Globtroter from its Home Screen icon. The first time, the iPad needs internet
+   to download the maps and flags (about 4 MB). After that it also works offline.
+
+**Updating:** when something changes in the app, go to your site in Netlify → **Deploys** and drag the
+new `app` folder onto the "Need to update your site?" area. The iPad will download the new version the next time it is launched with internet.
+
+Points, badges and progress are saved on the iPad, inside the app. Don't clear this site's data
+in Safari settings, or you will lose your progress.
+
+---
+
+## Quick test without creating an account (iPad and Mac on the same Wi-Fi network)
+
+1. On the Mac open **Terminal** and type:
    ```bash
    cd ~/claude_projects/globtroter/app && python3 -m http.server 8000
    ```
-2. Na iPadzie otwórz w Safari adres **`http://ADRES-MACA:8000`**. Adres Maca znajdziesz
-   w Ustawieniach systemowych → Wi-Fi → Szczegóły → Adres IP (np. `192.168.1.146`).
-3. Działa tylko wtedy, gdy Mac jest włączony, a polecenie w Terminalu pracuje.
-   Postępy z wersji testowej nie przejdą do wersji z Netlify.
+2. On the iPad open **`http://MAC-ADDRESS:8000`** in Safari. You can find the Mac's address
+   in System Settings → Wi-Fi → Details → IP Address (e.g. `192.168.1.146`).
+3. It only works while the Mac is on and the Terminal command is running.
+   Progress from the test version will not carry over to the Netlify version.
 
 ---
 
-## Jak grać
+## How to play
 
-**Flagi i stolice**
-- Wybierz liczbę pytań (10, 20 albo wszystkie) i sposób odpowiadania, potem region.
-- Przy wpisywaniu nie trzeba polskich znaków ani wielkich liter, a drobne literówki są wybaczane
-  („wegry”, „Wengry” → Węgry). Działają też inne nazwy: Holandia/Niderlandy, Birma/Mjanma, USA, RPA, ZEA.
-- **Podpowiadanie nazw**: po dwóch literach pod polem pojawia się lista pasujących krajów (albo stolic),
-  np. „pol” → Polska. Stuknięcie nazwy od razu ją zatwierdza. Enter wybiera nazwę podświetloną,
-  a gdy pasuje kilka (np. „ira” → Irak, Iran), najpierw prosi o wybór. Podpowiadanie wyłączysz na ekranie
-  wyboru regionu („Podpowiadanie nazw: Nie”).
-- 💡 **Podpowiedź** odsłania pierwsze litery (za mniej punktów). **Nie wiem** pokazuje odpowiedź.
-- Po pomyłce widać, czyja to była flaga albo stolica, więc z każdego błędu czegoś się uczysz.
-- Na koniec rundy jest lista **Do powtórki** i przycisk **Powtórz błędy**.
+**Flags and capitals**
+- Choose the number of questions (10, 20 or all) and the answer method, then a region.
+- When typing, Polish diacritics and capital letters are not required, and small typos are forgiven
+  ("wegry", "Wengry" → Węgry). Alternative names work too: Holandia/Niderlandy, Birma/Mjanma, USA, RPA, ZEA.
+- **Name suggestions**: after two letters a list of matching countries (or capitals) appears under the field,
+  e.g. "pol" → Polska. Tapping a name confirms it right away. Enter picks the highlighted name,
+  and when several match (e.g. "ira" → Irak, Iran), it first asks you to choose. You can turn suggestions off on the
+  region selection screen ("Name suggestions: No").
+- 💡 **Hint** reveals the first letters (for fewer points). **I don't know** shows the answer.
+- After a mistake you see whose flag or capital it was, so you learn something from every error.
+- At the end of a round there is a **To review** list and a **Repeat mistakes** button.
 
-**Mapa**
-- **Przeciągnij** nazwę kraju z listy na mapę. Na iPadzie pociągnij ją w stronę mapy
-  albo przytrzymaj chwilę i przesuń. Możesz też **stuknąć nazwę**, a potem miejsce na mapie.
-- **Dwoma palcami** przybliżasz i przesuwasz mapę; przyciski **+ − ⤢** robią to samo.
-- Najmniejsze państwa (Watykan, Monako, wyspy Karaibów i Pacyfiku) mają na mapie **kółka**.
-- Na każdy kraj są 3 próby. Po trzeciej pomyłce mapa pokazuje, gdzie on leży.
-- 💡 **Podpowiedź**: stuknij kraj na liście, potem 💡. Mapa mignie w miejscu, gdzie leży ten kraj.
-- Ułożenie mapy można przerwać: postęp zapisuje się sam, a przy kontynencie pojawia się **Kontynuuj**.
-- **📖 Ucz się** otwiera mapę z podpisami: stuknij kraj, żeby zobaczyć jego nazwę, flagę i stolicę.
+**Map**
+- **Drag** a country name from the list onto the map. On the iPad, pull it toward the map
+  or press and hold for a moment and then move it. You can also **tap the name** and then a place on the map.
+- **Two fingers** zoom and pan the map; the **+ − ⤢** buttons do the same.
+- The smallest countries (the Vatican, Monaco, Caribbean and Pacific islands) are shown as **circles** on the map.
+- Each country gets 3 tries. After the third mistake the map shows where it is.
+- 💡 **Hint**: tap a country in the list, then 💡. The map flashes where that country is.
+- You can interrupt a map round: progress is saved automatically, and a **Continue** button appears next to the continent.
+- **📖 Learn** opens the map with labels: tap a country to see its name, flag and capital.
 
-## Punkty i nagrody
+## Points and rewards
 
-- **XP** za każdą dobrą odpowiedź: 20 za wpisaną, 10 za wybraną, +5 za szybką (poniżej kilku sekund).
-- **Seria 🔥**: kolejne dobre odpowiedzi mnożą punkty ×2 (od 5 z rzędu), ×3 (od 10), ×4 (od 20).
-  Na mapie mnożnik wynosi ×1,5 i ×2.
-- **Poziomy**: od 🎒 Turysty przez 🧭 Podróżnika i 🗺️ Kartografa aż do 👑 Legendy świata.
-- **Gwiazdki opanowania** (3 kropki przy kraju w Atlasie): każda dobra odpowiedź dodaje kropkę, błąd zabiera.
-  Trzecią kropkę daje tylko odpowiedź **wpisana** bez podpowiedzi.
-- **Gwiazdki za mapę** (do 3) zależą od liczby błędów; zapisują się rekordy czasu.
-- **22 odznaki**, np. Gorąca seria, Perfekcja, Błyskawica, Weksylolog, Snajper, Zdobywca świata, Ekspres przez Europę.
-- **Seria dni** 🔥: graj codziennie, żeby ją utrzymać.
+- **XP** for every correct answer: 20 for a typed one, 10 for a chosen one, +5 for a fast one (within a few seconds).
+- **Streak 🔥**: consecutive correct answers multiply points ×2 (from 5 in a row), ×3 (from 10), ×4 (from 20).
+  On the map the multipliers are ×1.5 and ×2.
+- **Levels**: from 🎒 Tourist through 🧭 Traveler and 🗺️ Cartographer up to 👑 World Legend.
+- **Mastery stars** (3 dots next to a country in the Atlas): each correct answer adds a dot, a mistake removes one.
+  The third dot is only given for an answer that was **typed** without a hint.
+- **Map stars** (up to 3) depend on the number of mistakes; time records are saved.
+- **22 badges**, e.g. Hot Streak, Perfection, Lightning, Vexillologist, Sniper, World Conqueror, Europe Express.
+- **Day streak** 🔥: play every day to keep it going.
 
 ---
 
-## Dla ciekawych: skąd dane
+## For the curious: where the data comes from
 
-- Kontury państw: **Natural Earth** 1:50m (domena publiczna). Każdy kontynent ma własny rzut
-  (azymutalny równopolowy Lamberta), więc kraje nie są zniekształcone.
-- Flagi: **flag-icons** (licencja MIT, plik `app/flags/LICENSE`).
-- Polskie nazwy państw i stolic według urzędowego wykazu nazw geograficznych, z popularnymi wariantami.
+- Country outlines: **Natural Earth** 1:50m (public domain). Each continent has its own projection
+  (Lambert azimuthal equal-area), so countries are not distorted.
+- Flags: **flag-icons** (MIT license, file `app/flags/LICENSE`).
+- Polish names of countries and capitals follow the official register of geographical names, with common variants.
 
-Pliki w `app/data` i `app/flags` buduje skrypt `tools/build_data.py` (wymaga pobranego GeoJSON Natural Earth
-i paczki flag-icons). Listę krajów, stolic i akceptowanych nazw można poprawić w `tools/countries_data.py`.
-Ikonę rysuje `tools/make_icon.py`. Do testów na komputerze: `python3 tools/serve.py`, potem http://localhost:8766.
+The files in `app/data` and `app/flags` are built by the `tools/build_data.py` script (it needs the downloaded Natural Earth GeoJSON
+and the flag-icons package). The list of countries, capitals and accepted names can be edited in `tools/countries_data.py`.
+The icon is drawn by `tools/make_icon.py`. For testing on a computer: `python3 tools/serve.py`, then http://localhost:8766.
