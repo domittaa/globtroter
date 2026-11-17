@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Globtroter">
+<meta name="theme-color" content="#eef2ff">
+<meta name="description" content="Nauka flag, stolic i położenia krajów świata">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css">
+<title>Globtroter</title>
+</head>
+<body>
+<div id="app">
+  <section id="home" class="screen hidden"></section>
+  <section id="setup" class="screen hidden"></section>
+  <section id="quiz" class="screen hidden"></section>
+  <section id="maps" class="screen hidden"></section>
+  <section id="mapgame" class="screen hidden"></section>
+  <section id="atlas" class="screen hidden"></section>
+  <section id="badges" class="screen hidden"></section>
+</div>
+<div id="modal-root"></div>
+<div id="toasts"></div>
+<canvas id="confetti"></canvas>
+<div id="boot"><div class="boot-globe">🌍</div><p>Globtroter</p></div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
